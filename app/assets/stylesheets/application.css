@@ -16,7 +16,7 @@
 
 body {
   padding-top: 70px;
-  background: #eee;
+  background: #eee !important;
 }
 
 .navbar {
