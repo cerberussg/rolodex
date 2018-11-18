@@ -2,13 +2,12 @@
   <div class="alert alert-warning">
     <strong>Record not found</strong>
   </div>
-<% else %>
-  <div class="panel panel-default">
-    <table class="table">
-      <%= render @contacts %>
-    </table>
-  </div>
 <% end %>
+<div class="panel panel-default">
+  <table class="table">
+    <%= render @contacts %>
+  </table>
+</div>
 
 <div class="text-center">
   <nav>
