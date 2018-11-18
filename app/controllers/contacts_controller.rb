@@ -1,9 +1,9 @@
 class ContactsController < ApplicationController
   def index
     if params[:group_id] && !params[:group_id].empty?
-      @contacts = Group.find(params[:group_id]).contacts.page(params[:page])
+      @contacts = Group.find(params[:group_id]).contacts.order(created_at: :desc).page(params[:page])
     else
-      @contacts = Contact.page(params[:page])
+      @contacts = Contact.order(created_at: :desc).page(params[:page])
     end
   end
 
@@ -19,7 +19,6 @@ class ContactsController < ApplicationController
         flash[:success] = "Contact added!"
         format.html { redirect_to root_path }
       else
-        flash[:danger] = "Contact couldn't be added"
         format.html {render :new }
       end
     end
