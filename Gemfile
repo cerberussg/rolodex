@@ -14,6 +14,7 @@ gem 'jbuilder', '~> 2.5'
 gem 'bootsnap', '>= 1.1.0', require: false
 gem 'dotenv-rails', '~> 2.5'
 gem 'kaminari', '~> 1.1', '>= 1.1.1'
+gem 'mini_magick', '~> 4.9', '>= 4.9.2'
 
 group :development, :test do
   gem 'byebug', platforms: [:mri, :mingw, :x64_mingw]
