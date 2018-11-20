@@ -30,6 +30,9 @@ group :development, :test do
   gem 'webmock', '~> 3.4', '>= 3.4.2'
 end
 
+gem 'factory_bot_rails', '~> 4.11', '>= 4.11.1'
+gem 'simplecov', '~> 0.16.1'
+
 group :development do
   gem 'web-console', '>= 3.3.0'
   gem 'listen', '>= 3.0.5', '< 3.2'
