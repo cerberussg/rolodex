@@ -28,6 +28,19 @@ class ContactsController < ApplicationController
     @contact = Contact.find(params[:id])
   end
 
+  def update
+    @contact = Contact.find(params[:id])
+    respond_to do |format|
+      if @contact.update(contact_params)
+        flash[:success] = "Contact was successfully updated."
+        format.html { redirect_to contacts_path }
+
+      else
+        format.html { render :edit }
+      end
+    end
+  end
+
 
   private
 
