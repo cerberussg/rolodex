@@ -1,5 +1,9 @@
 require 'rails_helper'
 
 RSpec.describe Contact, type: :model do
-  pending "add some examples to (or delete) #{__FILE__}"
+  context 'valid factory' do
+    it 'has a valid factory' do
+      expect(FactoryBot.build(:contact)).to be_valid
+    end
+  end
 end
