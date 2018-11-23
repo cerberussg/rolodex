@@ -14,26 +14,26 @@
       <img src="./assets/0.10.2/loading.gif" alt="loading"/>
     </div>
     <div id="wrapper" style="display:none;">
-      <div class="timestamp">Generated <abbr class="timeago" title="2018-11-21T18:15:08-05:00">2018-11-21T18:15:08-05:00</abbr></div>
+      <div class="timestamp">Generated <abbr class="timeago" title="2018-11-23T10:06:20-05:00">2018-11-23T10:06:20-05:00</abbr></div>
       <ul class="group_tabs"></ul>
 
       <div id="content">
         <div class="file_list_container" id="AllFiles">
   <h2>
     <span class="group_name">All Files</span>
-    (<span class="covered_percent"><span class="green">98.48%</span></span>
+    (<span class="covered_percent"><span class="green">98.53%</span></span>
      covered at
      <span class="covered_strength">
        <span class="green">
-         1.53
+         1.52
        </span>
     </span> hits/line)
   </h2>
   <a name="AllFiles"></a>
   <div>
     <b>8</b> files in total.
-    <b>66</b> relevant lines. 
-    <span class="green"><b>65</b> lines covered</span> and
+    <b>68</b> relevant lines. 
+    <span class="green"><b>67</b> lines covered</span> and
     <span class="red"><b>1</b> lines missed </span>
   </div>
   <table class="file_list">
@@ -62,10 +62,10 @@
       
       <tr>
         <td class="strong"><a href="#e288d91032a07626c1c6d90f872252c4c1368c59" class="src_link" title="app/controllers/contacts_controller.rb">app/controllers/contacts_controller.rb</a></td>
-        <td class="green strong">96.15 %</td>
-        <td>50</td>
+        <td class="green strong">96.3 %</td>
+        <td>49</td>
+        <td>27</td>
         <td>26</td>
-        <td>25</td>
         <td>1</td>
         <td>1.5</td>
       </tr>
@@ -83,11 +83,11 @@
       <tr>
         <td class="strong"><a href="#6bc17588928a5e6798a6ccf199c502528a11242d" class="src_link" title="app/models/contact.rb">app/models/contact.rb</a></td>
         <td class="green strong">100.0 %</td>
-        <td>15</td>
-        <td>8</td>
-        <td>8</td>
+        <td>16</td>
+        <td>9</td>
+        <td>9</td>
         <td>0</td>
-        <td>2.3</td>
+        <td>2.1</td>
       </tr>
       
       <tr>
@@ -180,10 +180,10 @@
         <div class="source_table" id="e288d91032a07626c1c6d90f872252c4c1368c59">
   <div class="header">
     <h3>app/controllers/contacts_controller.rb</h3>
-    <h4><span class="green">96.15 %</span> covered</h4>
+    <h4><span class="green">96.3 %</span> covered</h4>
     <div>
-      <b>26</b> relevant lines. 
-      <span class="green"><b>25</b> lines covered</span> and
+      <b>27</b> relevant lines. 
+      <span class="green"><b>26</b> lines covered</span> and
       <span class="red"><b>1</b> lines missed.</span>
     </div>
   </div>
@@ -281,10 +281,10 @@
           <code class="ruby">    @contact = Contact.new(contact_params)</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="16">
+        <li class="covered" data-hits="2" data-linenumber="16">
+          <span class="hits">2</span>
           
-          
-          <code class="ruby"></code>
+          <code class="ruby">    @contact.image.attach(params[:contact][:image])</code>
         </li>
       
         <li class="covered" data-hits="2" data-linenumber="17">
@@ -410,37 +410,37 @@
         <li class="never" data-hits="" data-linenumber="37">
           
           
-          <code class="ruby"></code>
-        </li>
-      
-        <li class="never" data-hits="" data-linenumber="38">
-          
-          
           <code class="ruby">      else</code>
         </li>
       
-        <li class="covered" data-hits="2" data-linenumber="39">
+        <li class="covered" data-hits="2" data-linenumber="38">
           <span class="hits">2</span>
           
           <code class="ruby">        format.html { render :edit }</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="40">
+        <li class="never" data-hits="" data-linenumber="39">
           
           
           <code class="ruby">      end</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="41">
+        <li class="never" data-hits="" data-linenumber="40">
           
           
           <code class="ruby">    end</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="42">
+        <li class="never" data-hits="" data-linenumber="41">
           
           
           <code class="ruby">  end</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="42">
+          
+          
+          <code class="ruby"></code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="43">
@@ -449,43 +449,37 @@
           <code class="ruby"></code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="44">
-          
-          
-          <code class="ruby"></code>
-        </li>
-      
-        <li class="covered" data-hits="1" data-linenumber="45">
+        <li class="covered" data-hits="1" data-linenumber="44">
           <span class="hits">1</span>
           
           <code class="ruby">  private</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="46">
+        <li class="never" data-hits="" data-linenumber="45">
           
           
           <code class="ruby"></code>
         </li>
       
-        <li class="covered" data-hits="1" data-linenumber="47">
+        <li class="covered" data-hits="1" data-linenumber="46">
           <span class="hits">1</span>
           
           <code class="ruby">  def contact_params</code>
         </li>
       
-        <li class="covered" data-hits="4" data-linenumber="48">
+        <li class="covered" data-hits="4" data-linenumber="47">
           <span class="hits">4</span>
           
-          <code class="ruby">    params.require(:contact).permit(:name,:company,:email,:phone,:address,:group_id)</code>
+          <code class="ruby">    params.require(:contact).permit(:name,:company,:email,:phone,:address,:group_id, :image)</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="49">
+        <li class="never" data-hits="" data-linenumber="48">
           
           
           <code class="ruby">  end</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="50">
+        <li class="never" data-hits="" data-linenumber="49">
           
           
           <code class="ruby">end</code>
@@ -538,8 +532,8 @@
     <h3>app/models/contact.rb</h3>
     <h4><span class="green">100.0 %</span> covered</h4>
     <div>
-      <b>8</b> relevant lines. 
-      <span class="green"><b>8</b> lines covered</span> and
+      <b>9</b> relevant lines. 
+      <span class="green"><b>9</b> lines covered</span> and
       <span class="red"><b>0</b> lines missed.</span>
     </div>
   </div>
@@ -559,40 +553,40 @@
           <code class="ruby">  belongs_to :group</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="3">
+        <li class="covered" data-hits="1" data-linenumber="3">
+          <span class="hits">1</span>
+          
+          <code class="ruby">  has_one_attached :image</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="4">
           
           
           <code class="ruby"></code>
         </li>
       
-        <li class="covered" data-hits="1" data-linenumber="4">
+        <li class="covered" data-hits="1" data-linenumber="5">
           <span class="hits">1</span>
           
           <code class="ruby">  paginates_per 6</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="5">
+        <li class="never" data-hits="" data-linenumber="6">
           
           
           <code class="ruby"></code>
-        </li>
-      
-        <li class="covered" data-hits="1" data-linenumber="6">
-          <span class="hits">1</span>
-          
-          <code class="ruby">  validates :name, :email, :group_id, presence: true</code>
         </li>
       
         <li class="covered" data-hits="1" data-linenumber="7">
           <span class="hits">1</span>
           
-          <code class="ruby">  validates :name, length: { minimum: 2 }</code>
+          <code class="ruby">  validates :name, :email, :group_id, presence: true</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="8">
+        <li class="covered" data-hits="1" data-linenumber="8">
+          <span class="hits">1</span>
           
-          
-          <code class="ruby"></code>
+          <code class="ruby">  validates :name, length: { minimum: 2 }</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="9">
@@ -601,37 +595,43 @@
           <code class="ruby"></code>
         </li>
       
-        <li class="covered" data-hits="1" data-linenumber="10">
-          <span class="hits">1</span>
-          
-          <code class="ruby">  def gravatar</code>
-        </li>
-      
-        <li class="covered" data-hits="6" data-linenumber="11">
-          <span class="hits">6</span>
-          
-          <code class="ruby">    hash = Digest::MD5.hexdigest(email.downcase)</code>
-        </li>
-      
-        <li class="never" data-hits="" data-linenumber="12">
+        <li class="never" data-hits="" data-linenumber="10">
           
           
           <code class="ruby"></code>
         </li>
       
-        <li class="covered" data-hits="6" data-linenumber="13">
+        <li class="covered" data-hits="1" data-linenumber="11">
+          <span class="hits">1</span>
+          
+          <code class="ruby">  def gravatar</code>
+        </li>
+      
+        <li class="covered" data-hits="6" data-linenumber="12">
+          <span class="hits">6</span>
+          
+          <code class="ruby">    hash = Digest::MD5.hexdigest(email.downcase)</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="13">
+          
+          
+          <code class="ruby"></code>
+        </li>
+      
+        <li class="covered" data-hits="6" data-linenumber="14">
           <span class="hits">6</span>
           
           <code class="ruby">    &quot;https://www.gravatar.com/avatar/#{hash}&quot;</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="14">
+        <li class="never" data-hits="" data-linenumber="15">
           
           
           <code class="ruby">  end</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="15">
+        <li class="never" data-hits="" data-linenumber="16">
           
           
           <code class="ruby">end</code>
