@@ -3,7 +3,11 @@
     <div class="media">
       <div class="media-left">
         <a href="#">
-          <%= image_tag contact.gravatar, class: "media-object" %>
+          <% if contact.image.attached? %>
+            <%= image_tag contact.image, class: "media-object", style: "width:100px; height:100px;" %>
+          <% else %>
+            <%= image_tag contact.gravatar, class: "media-object" %>
+          <% end %>
         </a>
       </div>
       <div class="media-body">

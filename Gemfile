@@ -15,6 +15,9 @@ gem 'bootsnap', '>= 1.1.0', require: false
 gem 'dotenv-rails', '~> 2.5'
 gem 'kaminari', '~> 1.1', '>= 1.1.1'
 gem 'mini_magick', '~> 4.9', '>= 4.9.2'
+gem 'jasny-bootstrap-rails', '~> 3.1', '>= 3.1.3'
+gem 'twitter-bootstrap-rails', '~> 4.0'
+gem 'jquery-rails', '~> 4.3', '>= 4.3.3'
 
 group :development, :test do
   gem 'byebug', platforms: [:mri, :mingw, :x64_mingw]

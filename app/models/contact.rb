@@ -1,5 +1,6 @@
 class Contact < ApplicationRecord
   belongs_to :group
+  has_one_attached :image
 
   paginates_per 6
 

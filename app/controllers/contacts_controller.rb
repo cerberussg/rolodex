@@ -13,7 +13,7 @@ class ContactsController < ApplicationController
 
   def create
     @contact = Contact.new(contact_params)
-
+    @contact.image.attach(params[:contact][:image])
     respond_to do |format|
       if @contact.save
         flash[:success] = "Contact added!"
@@ -44,6 +44,6 @@ class ContactsController < ApplicationController
   private
 
   def contact_params
-    params.require(:contact).permit(:name,:company,:email,:phone,:address,:group_id)
+    params.require(:contact).permit(:name,:company,:email,:phone,:address,:group_id, :image)
   end
 end
