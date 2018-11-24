@@ -1,4 +1,7 @@
 class ContactsController < ApplicationController
+  before_action :default_image, only: [:create]
+  before_action :set_contact, only: [:edit, :update, :destroy]
+
   def index
     if params[:group_id] && !params[:group_id].empty?
       @contacts = Group.find(params[:group_id]).contacts.order(created_at: :desc).page(params[:page])
@@ -25,11 +28,9 @@ class ContactsController < ApplicationController
   end
 
   def edit
-    @contact = Contact.find(params[:id])
   end
 
   def update
-    @contact = Contact.find(params[:id])
     respond_to do |format|
       if @contact.update(contact_params)
         flash[:success] = "Contact was successfully updated."
@@ -41,8 +42,11 @@ class ContactsController < ApplicationController
   end
 
   def destroy
-    Contact.find(params[:id]).destroy
-    redirect_to root_path
+    @contact.destory
+    respond_to do |format|
+      flash[:success] = "Contact was successfully deleted."
+      format.html { redirect_to contacts_path }
+    end
   end
 
 
@@ -50,6 +54,16 @@ class ContactsController < ApplicationController
 
   def contact_params
     params.require(:contact).permit(:name,:company,:email,:phone,:address,:group_id, :image)
+  end
+
+  def set_contact
+    @contact = Contact.find(params[:id])
+  end
+
+  def default_image
+    if self.image?
+      @contact.image.attach(io: File.open(Rails.root.join('app', 'assets', 'images', 'default_image.png')), filename: 'default_image.png', content_type: 'image/png')
+    end
   end
 
 end
