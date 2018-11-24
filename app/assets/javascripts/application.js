@@ -13,7 +13,11 @@
 //= require jquery
 //= require twitter/bootstrap
 //= require jasny-bootstrap.min
-//= require jquery-ui
+//= require jquery-ui/core
+//= require jquery-ui/widget
+//= require jquery-ui/position
+//= require jquery-ui/widgets/autocomplete
+//= require jquery-ui/widgets/menu
 //= require rails-ujs
 //= require turbolinks
 //= require activestorage
@@ -25,6 +29,7 @@ $(function() {
     minlength: 3,
     select: function (event, ui) {
       $('#term').val(ui.item.value);
+      $(this).closest('form').submit();
     }
   })
 });
