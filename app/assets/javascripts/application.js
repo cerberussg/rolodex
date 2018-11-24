@@ -11,8 +11,6 @@
 // about supported directives.
 //
 //= require jquery
-//= require twitter/bootstrap
-//= require jasny-bootstrap.min
 //= require jquery-ui/core
 //= require jquery-ui/widget
 //= require jquery-ui/position
@@ -20,10 +18,12 @@
 //= require jquery-ui/widgets/menu
 //= require rails-ujs
 //= require turbolinks
+//= require twitter/bootstrap
+//= require jasny-bootstrap.min
 //= require activestorage
 //= require_tree .
 
-$(function() {
+$( document ).on('turbolinks:load', function() {
   $('#term').autocomplete({
     source: "/contacts/autocomplete",
     minlength: 3,
