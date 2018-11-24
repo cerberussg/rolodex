@@ -11,9 +11,20 @@
 // about supported directives.
 //
 //= require jquery
-//= require rails-ujs
-//= require activestorage
 //= require twitter/bootstrap
 //= require jasny-bootstrap.min
+//= require jquery-ui
+//= require rails-ujs
 //= require turbolinks
+//= require activestorage
 //= require_tree .
+
+$(function() {
+  $('#term').autocomplete({
+    source: "/contacts/autocomplete",
+    minlength: 3,
+    select: function (event, ui) {
+      $('#term').val(ui.item.value);
+    }
+  })
+});
