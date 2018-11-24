@@ -3,6 +3,7 @@ class ContactsController < ApplicationController
   before_action :set_contact, only: [:edit, :update, :destroy]
 
   def index
+    session[:selected_group_id] = params[:group_id]
     if params[:group_id] && !params[:group_id].empty?
       @contacts = Group.find(params[:group_id]).contacts.order(created_at: :desc).page(params[:page])
     else
@@ -20,7 +21,7 @@ class ContactsController < ApplicationController
     respond_to do |format|
       if @contact.save
         flash[:success] = "Contact added!"
-        format.html { redirect_to root_path }
+        format.html { redirect_to contacts_path(previous_query_string) }
       else
         format.html {render :new }
       end
@@ -34,7 +35,7 @@ class ContactsController < ApplicationController
     respond_to do |format|
       if @contact.update(contact_params)
         flash[:success] = "Contact was successfully updated."
-        format.html { redirect_to contacts_path }
+        format.html { redirect_to contacts_path(previous_query_string) }
       else
         format.html { render :edit }
       end
@@ -64,6 +65,10 @@ class ContactsController < ApplicationController
     if self.image?
       @contact.image.attach(io: File.open(Rails.root.join('app', 'assets', 'images', 'default_image.png')), filename: 'default_image.png', content_type: 'image/png')
     end
+  end
+
+  def previous_query_string
+    session[:selected_group_id] ? { group_id: session[:selected_group_id] } : {}
   end
 
 end

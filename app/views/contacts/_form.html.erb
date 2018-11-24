@@ -60,8 +60,10 @@
           <div class="form-group">
             <%= form.label :group_id, class: "control-label col-md-3" %>
             <div class="col-md-5">
+              <% attr = { prompt: "Select Group" } %>
+              <% attr[:selected] = session[:selected_group_id].to_i if session[:selected_group_id] %>
               <%= form.collection_select :group_id, Group.all, :id, :name,
-                { prompt: "Select Group"}, class: "form-control" %>
+                attr, class: "form-control" %>
             </div>
             <div class="col-md-3">
               <a href="#" id="add-group-btn" class="btn btn-default btn-block">Add Group</a>
@@ -84,7 +86,7 @@
           <div class="fileinput fileinput-new" data-provides="fileinput">
             <div class="fileinput-new thumbnail" style="width: 150px; height: 150px;">
                 <% if @contact.image.attached? %>
-                  <%= image_tag contact.image, class: "media-object", style: "width:100px; height:100px;" %>
+                  <%= image_tag @contact.image, class: "media-object", style: "width:150px; height:150px;" %>
                 <% else %>
                   <%= image_tag 'default_image.png', class: "media-object", style: "width:150px; height:150px;" %>
                 <% end %>
