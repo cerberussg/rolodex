@@ -13,4 +13,21 @@ class Contact < ApplicationRecord
 
     "https://www.gravatar.com/avatar/#{hash}"
   end
+
+  def self.search(term)
+    if term && !term.empty?
+      term = term.capitalize
+      where('name LIKE ?', "%#{term}%")
+    else
+      all
+    end
+  end
+
+  def self.by_group(group_id)
+    if group_id && !group_id.empty?
+      where(group_id: group_id)
+    else
+      all
+    end
+  end
 end
