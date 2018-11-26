@@ -19,6 +19,7 @@ gem 'jasny-bootstrap-rails', '~> 3.1', '>= 3.1.3'
 gem 'twitter-bootstrap-rails', '~> 4.0'
 gem 'jquery-rails', '~> 4.3', '>= 4.3.3'
 gem 'jquery-ui-rails', '~> 6.0', '>= 6.0.1'
+gem 'devise', '~> 4.5'
 
 group :development, :test do
   gem 'byebug', platforms: [:mri, :mingw, :x64_mingw]

@@ -93,3 +93,7 @@ body {
 .ui-helper-hidden-accessible {
   display: none;
 }
+
+.btn-circle {
+  border-radius: 50% !important;
+}
