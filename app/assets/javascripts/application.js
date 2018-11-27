@@ -16,7 +16,7 @@
 //= require jquery-ui/position
 //= require jquery-ui/widgets/autocomplete
 //= require jquery-ui/widgets/menu
-//= require twitter/bootstrap
+//= require twitter/bootstrap/dropdown
 //= require rails-ujs
 //= require turbolinks
 //= require jasny-bootstrap.min
