@@ -1,4 +1,4 @@
-<nav class="navbar navbar-default navbar-fixed-top">
+<nav class="navbar navbar-fixed-top brand-primary">
   <div class="container">
     <div class="navbar-header">
       <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar-collapse" aria-expanded="false">
@@ -19,12 +19,12 @@
         </div>
       <% else %>
         <ul class="nav navbar-nav">
-          <li class="<%= active_item('dashboard') %>"><%= link_to "Dashboard", dashboard_path %></li>
-          <li class="<%= active_item('contacts') %>"><%= link_to "All Contacts", contacts_path %></li>
+          <li class="<%= active_item('dashboard') %>"><%= link_to "Dashboard", dashboard_path, class: "brand-primary" %></li>
+          <li class="<%= active_item('contacts') %>"><%= link_to "All Contacts", contacts_path, class: "brand-primary" %></li>
         </ul>
         <ul class="nav navbar-right navbar-nav">
           <li class="dropdown">
-            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
+            <a href="#" class="dropdown-toggle brand-primary" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
               <i class="glyphicon glyphicon-user"></i>
               <%= current_user.name %>
               <span class="caret"></span>
