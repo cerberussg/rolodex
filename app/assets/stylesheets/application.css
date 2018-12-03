@@ -161,8 +161,20 @@ body {
 }
 
 .panel.panel-default {
-  -moz-box-shadow: rgba(0, 0, 0, 0.09) 0 2px 0;
-  -webkit-box-shadow: rgba(0, 0, 0, 0.09) 0 2px 0;
-  box-shadow: rgba(0, 0, 0, 0.09) 0 2px 0;
-  border: .5px solid #350362 !important;
+  -moz-box-shadow: rgba(0, 0, 0.1, 0.1) 2px 2.5px 0;
+  -webkit-box-shadow: rgba(0, 0, 0.1, 0.1) 2px 2.5px 0;
+  box-shadow: rgba(0, 0, 0.1, 0.1) 2px  2.5px 0;
+  border: 1.5px solid #350362 !important;
+}
+
+.pagination-custom {
+  background-color: #756C7E !important;
+  color: #350362 !important;
+  border-color: #756C7E !important;
+}
+
+.pagination-active {
+  background-color: #350362 !important;
+  border-color: #350362 !important;
+  color: #756C7E !important;
 }
