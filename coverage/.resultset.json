@@ -247,12 +247,12 @@
         1,
         1,
         1,
-        null,
         1,
         null,
         1,
-        1,
         null,
+        1,
+        1,
         null,
         1,
         0,
@@ -261,8 +261,6 @@
         null,
         null,
         1,
-        0,
-        null,
         null,
         1,
         null
@@ -279,6 +277,7 @@
         null
       ],
       "/Users/sgoyette/RoR/rolodex/app/models/group.rb": [
+        1,
         1,
         1,
         null,
@@ -312,7 +311,7 @@
         1,
         1,
         1,
-        2,
+        1,
         null,
         0,
         null,
@@ -339,6 +338,6 @@
         null
       ]
     },
-    "timestamp": 1543713846
+    "timestamp": 1543944811
   }
 }

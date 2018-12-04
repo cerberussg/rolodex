@@ -14,27 +14,27 @@
       <img src="./assets/0.10.2/loading.gif" alt="loading"/>
     </div>
     <div id="wrapper" style="display:none;">
-      <div class="timestamp">Generated <abbr class="timeago" title="2018-12-01T20:24:06-05:00">2018-12-01T20:24:06-05:00</abbr></div>
+      <div class="timestamp">Generated <abbr class="timeago" title="2018-12-04T12:33:31-05:00">2018-12-04T12:33:31-05:00</abbr></div>
       <ul class="group_tabs"></ul>
 
       <div id="content">
         <div class="file_list_container" id="AllFiles">
   <h2>
     <span class="group_name">All Files</span>
-    (<span class="covered_percent"><span class="red">71.43%</span></span>
+    (<span class="covered_percent"><span class="red">72.3%</span></span>
      covered at
      <span class="covered_strength">
        <span class="red">
-         0.72
+         0.71
        </span>
     </span> hits/line)
   </h2>
   <a name="AllFiles"></a>
   <div>
     <b>21</b> files in total.
-    <b>147</b> relevant lines. 
-    <span class="green"><b>105</b> lines covered</span> and
-    <span class="red"><b>42</b> lines missed </span>
+    <b>148</b> relevant lines. 
+    <span class="green"><b>107</b> lines covered</span> and
+    <span class="red"><b>41</b> lines missed </span>
   </div>
   <table class="file_list">
     <thead>
@@ -112,20 +112,20 @@
       
       <tr>
         <td class="strong"><a href="#6bc17588928a5e6798a6ccf199c502528a11242d" class="src_link" title="app/models/contact.rb">app/models/contact.rb</a></td>
-        <td class="red strong">75.0 %</td>
-        <td>22</td>
+        <td class="yellow strong">83.33 %</td>
+        <td>20</td>
         <td>12</td>
-        <td>9</td>
-        <td>3</td>
+        <td>10</td>
+        <td>2</td>
         <td>0.8</td>
       </tr>
       
       <tr>
         <td class="strong"><a href="#18e461f55bb0cec1e64c3c3a862713cc57783614" class="src_link" title="app/models/group.rb">app/models/group.rb</a></td>
         <td class="green strong">100.0 %</td>
-        <td>6</td>
-        <td>4</td>
-        <td>4</td>
+        <td>7</td>
+        <td>5</td>
+        <td>5</td>
         <td>0</td>
         <td>1.0</td>
       </tr>
@@ -237,7 +237,7 @@
         <td>17</td>
         <td>14</td>
         <td>3</td>
-        <td>0.9</td>
+        <td>0.8</td>
       </tr>
       
       <tr>
@@ -1149,11 +1149,11 @@
         <div class="source_table" id="6bc17588928a5e6798a6ccf199c502528a11242d">
   <div class="header">
     <h3>app/models/contact.rb</h3>
-    <h4><span class="red">75.0 %</span> covered</h4>
+    <h4><span class="yellow">83.33 %</span> covered</h4>
     <div>
       <b>12</b> relevant lines. 
-      <span class="green"><b>9</b> lines covered</span> and
-      <span class="red"><b>3</b> lines missed.</span>
+      <span class="green"><b>10</b> lines covered</span> and
+      <span class="red"><b>2</b> lines missed.</span>
     </div>
   </div>
   
@@ -1175,43 +1175,43 @@
         <li class="covered" data-hits="1" data-linenumber="3">
           <span class="hits">1</span>
           
+          <code class="ruby">  belongs_to :user</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="4">
+          <span class="hits">1</span>
+          
           <code class="ruby">  has_one_attached :image</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="4">
+        <li class="never" data-hits="" data-linenumber="5">
           
           
           <code class="ruby"></code>
         </li>
       
-        <li class="covered" data-hits="1" data-linenumber="5">
+        <li class="covered" data-hits="1" data-linenumber="6">
           <span class="hits">1</span>
           
           <code class="ruby">  paginates_per 5</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="6">
+        <li class="never" data-hits="" data-linenumber="7">
           
           
           <code class="ruby"></code>
-        </li>
-      
-        <li class="covered" data-hits="1" data-linenumber="7">
-          <span class="hits">1</span>
-          
-          <code class="ruby">  validates :name, :email, :group_id, presence: true</code>
         </li>
       
         <li class="covered" data-hits="1" data-linenumber="8">
           <span class="hits">1</span>
           
-          <code class="ruby">  validates :name, length: { minimum: 2 }</code>
+          <code class="ruby">  validates :name, :email, :group_id, presence: true</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="9">
+        <li class="covered" data-hits="1" data-linenumber="9">
+          <span class="hits">1</span>
           
-          
-          <code class="ruby"></code>
+          <code class="ruby">  validates :name, length: { minimum: 2 }</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="10">
@@ -1259,34 +1259,22 @@
         <li class="covered" data-hits="1" data-linenumber="17">
           <span class="hits">1</span>
           
-          <code class="ruby">  scope :search, -&gt; (term) do</code>
+          <code class="ruby">  scope :search, -&gt;(term) { where(&#39;LOWER(name) LIKE :term or LOWER(company) LIKE :term or LOWER(email) LIKE :term&#39;, term: &quot;%#{term.downcase}%&quot;)if term.present? }</code>
         </li>
       
-        <li class="missed" data-hits="0" data-linenumber="18">
-          
-          
-          <code class="ruby">    where(&#39;LOWER(name) LIKE :term or LOWER(company) LIKE :term or LOWER(email) LIKE :term&#39;, term: &quot;%#{term.downcase}%&quot;)if term.present?</code>
-        </li>
-      
-        <li class="never" data-hits="" data-linenumber="19">
-          
-          
-          <code class="ruby">  end</code>
-        </li>
-      
-        <li class="never" data-hits="" data-linenumber="20">
+        <li class="never" data-hits="" data-linenumber="18">
           
           
           <code class="ruby"></code>
         </li>
       
-        <li class="covered" data-hits="1" data-linenumber="21">
+        <li class="covered" data-hits="1" data-linenumber="19">
           <span class="hits">1</span>
           
-          <code class="ruby">  scope :by_group, -&gt; (group_id) { where(group_id: group_id) if group_id.present? }</code>
+          <code class="ruby">  scope :by_group, -&gt;(group_id) { where(group_id: group_id) if group_id.present? }</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="22">
+        <li class="never" data-hits="" data-linenumber="20">
           
           
           <code class="ruby">end</code>
@@ -1302,8 +1290,8 @@
     <h3>app/models/group.rb</h3>
     <h4><span class="green">100.0 %</span> covered</h4>
     <div>
-      <b>4</b> relevant lines. 
-      <span class="green"><b>4</b> lines covered</span> and
+      <b>5</b> relevant lines. 
+      <span class="green"><b>5</b> lines covered</span> and
       <span class="red"><b>0</b> lines missed.</span>
     </div>
   </div>
@@ -1323,25 +1311,31 @@
           <code class="ruby">  has_many :contacts</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="3">
+        <li class="covered" data-hits="1" data-linenumber="3">
+          <span class="hits">1</span>
+          
+          <code class="ruby">  belongs_to :user</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="4">
           
           
           <code class="ruby"></code>
         </li>
       
-        <li class="covered" data-hits="1" data-linenumber="4">
+        <li class="covered" data-hits="1" data-linenumber="5">
           <span class="hits">1</span>
           
           <code class="ruby">  validates :name, presence: true</code>
         </li>
       
-        <li class="covered" data-hits="1" data-linenumber="5">
+        <li class="covered" data-hits="1" data-linenumber="6">
           <span class="hits">1</span>
           
           <code class="ruby">  validates :name, uniqueness: true</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="6">
+        <li class="never" data-hits="" data-linenumber="7">
           
           
           <code class="ruby">end</code>
@@ -2276,8 +2270,8 @@
           <code class="ruby">      13.times do</code>
         </li>
       
-        <li class="covered" data-hits="2" data-linenumber="19">
-          <span class="hits">2</span>
+        <li class="covered" data-hits="1" data-linenumber="19">
+          <span class="hits">1</span>
           
           <code class="ruby">        FactoryBot.create(:contact)</code>
         </li>
