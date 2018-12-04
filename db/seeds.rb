@@ -10,6 +10,7 @@ user_ids << User.create(
   email: 'johndoe@text.com',
   password: 'secret'
 ).id
+
 user_ids << User.create(
   name: 'Jane Roe',
   email: 'janeroe@text.com',
