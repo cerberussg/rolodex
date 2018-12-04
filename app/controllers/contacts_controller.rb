@@ -33,9 +33,11 @@ class ContactsController < ApplicationController
   end
 
   def edit
+    authorize @contact
   end
 
   def update
+    authorize @contact
     respond_to do |format|
       if @contact.update(contact_params)
         flash[:success] = 'Contact was successfully updated.'
@@ -47,6 +49,7 @@ class ContactsController < ApplicationController
   end
 
   def destroy
+    authorize @contact
     @contact.destory
     respond_to do |format|
       flash[:success] = 'Contact was successfully deleted.'
