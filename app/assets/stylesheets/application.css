@@ -61,6 +61,9 @@ body {
 
   color: #350362 !important; 
   background-color: #756C7E !important;
+  -moz-box-shadow: rgba(0, 0, 0.1, 0.1) 2px 2.5px 0;
+  -webkit-box-shadow: rgba(0, 0, 0.1, 0.1) 2px 2.5px 0;
+  box-shadow: rgba(0, 0, 0.1, 0.1) 2px  2.5px 0;
 }
 
 .btn-primary {
