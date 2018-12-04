@@ -10,5 +10,6 @@ Rails.application.routes.draw do
 
   post '/groups', to: 'groups#create'
   get '/dashboard', to: 'dashboard#index'
+
   root 'home#index'
 end
