@@ -61,7 +61,7 @@
             <div class="col-md-5">
               <% attr = { prompt: "Select Group" } %>
               <% attr[:selected] = session[:selected_group_id].to_i if session[:selected_group_id] %>
-              <%= form.collection_select :group_id, Group.all, :id, :name,
+              <%= form.collection_select :group_id, current_user.groups, :id, :name,
                 attr, class: "form-control" %>
             </div>
             <div class="col-md-3">
@@ -108,7 +108,7 @@
         <div class="row">
           <div class="col-md-offset-3 col-md-6">
             <%= form.submit @contact.new_record? ? "Save" : "Update", class: "btn btn-primary" %>
-            <%= link_to "Cancel", root_path, class: "btn btn-default" %>
+            <%= link_to "Cancel", contacts_path, class: "btn btn-default" %>
           </div>
         </div>
       </div>
