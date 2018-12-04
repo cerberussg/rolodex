@@ -60,7 +60,13 @@ class ContactsController < ApplicationController
   private
 
   def contact_params
-    params.require(:contact).permit(:name,:company,:email,:phone,:address,:group_id, :image)
+    params.require(:contact).permit(:name,
+                                    :company,
+                                    :email,
+                                    :phone,
+                                    :address,
+                                    :group_id,
+                                    :image)
   end
 
   def set_contact
@@ -68,12 +74,12 @@ class ContactsController < ApplicationController
   end
 
   def default_image
-    if self.image?
+    if image?
       @contact.image.attach(io: File.open(Rails.root.join('app',
                                                           'assets',
                                                           'images',
                                                           'default_image.png')),
-                            filename: 'default_image.png', 
+                            filename: 'default_image.png',
                             content_type: 'image/png')
     end
   end
