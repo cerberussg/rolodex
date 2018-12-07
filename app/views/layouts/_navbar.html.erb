@@ -30,10 +30,10 @@
               <%= current_user.name %>
               <span class="caret"></span>
             </a>
-            <ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
-              <li><%= link_to "Profile", edit_user_registration_path %></li>
+            <ul class="dropdown-menu brand-primary" aria-labelledby="dropdownMenu1">
+              <li><%= link_to "Profile", edit_user_registration_path, class: 'brand-primary' %></li>
               <li>
-                <%= link_to "Logout", destroy_user_session_path, method: :delete %>
+                <%= link_to "Logout", destroy_user_session_path, method: :delete, class: 'brand-primary' %>
               </li>
             </ul>
           </li>
