@@ -1,6 +1,6 @@
 class ContactsController < ApplicationController
   before_action :authenticate_user!
-  before_action :default_image, only: [:create]
+  # before_action :default_image, only: [:create]
   before_action :set_contact, only: [:edit, :update, :destroy]
 
   def index
@@ -73,16 +73,16 @@ class ContactsController < ApplicationController
     @contact = Contact.find(params[:id])
   end
 
-  def default_image
-    if image?
-      @contact.image.attach(io: File.open(Rails.root.join('app',
-                                                          'assets',
-                                                          'images',
-                                                          'default_image.png')),
-                            filename: 'default_image.png',
-                            content_type: 'image/png')
-    end
-  end
+  # def default_image
+  #   unless self.image
+  #     @contact.image.attach(io: File.open(Rails.root.join('app',
+  #                                                         'assets',
+  #                                                         'images',
+  #                                                         'default_image.png')),
+  #                           filename: 'default_image.png',
+  #                           content_type: 'image/png')
+  #   end
+  # end
 
   def previous_query_string
     session[:selected_group_id] ? { group_id: session[:selected_group_id] } : {}
