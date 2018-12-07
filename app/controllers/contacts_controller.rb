@@ -27,6 +27,7 @@ class ContactsController < ApplicationController
         flash[:success] = 'Contact added!'
         format.html { redirect_to contacts_path(previous_query_string) }
       else
+        flash[:error] = 'Contact failed to be created.'
         format.html { render :new }
       end
     end
@@ -43,6 +44,7 @@ class ContactsController < ApplicationController
         flash[:success] = 'Contact was successfully updated.'
         format.html { redirect_to contacts_path(previous_query_string) }
       else
+        flash[:error] = 'Contact failed to update correctly.'
         format.html { render :edit }
       end
     end
@@ -50,7 +52,7 @@ class ContactsController < ApplicationController
 
   def destroy
     authorize @contact
-    @contact.destory
+    @contact.destroy
     respond_to do |format|
       flash[:success] = 'Contact was successfully deleted.'
       format.html { redirect_to contacts_path }

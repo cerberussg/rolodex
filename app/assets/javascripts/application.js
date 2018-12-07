@@ -21,6 +21,7 @@
 //= require turbolinks
 //= require jasny-bootstrap.min
 //= require activestorage
+//= require toastr
 //= require_tree .
 
 $( document ).on('turbolinks:load', function() {

@@ -21,6 +21,7 @@ gem 'jquery-rails', '~> 4.3', '>= 4.3.3'
 gem 'jquery-ui-rails', '~> 6.0', '>= 6.0.1'
 gem 'devise', '~> 4.5'
 gem 'pundit', '~> 2.0'
+gem 'toastr-rails', '~> 1.0', '>= 1.0.3'
 
 group :development, :test do
   gem 'byebug', platforms: [:mri, :mingw, :x64_mingw]
