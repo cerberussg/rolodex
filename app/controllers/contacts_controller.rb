@@ -5,14 +5,14 @@ class ContactsController < ApplicationController
 
   def index
     session[:selected_group_id] = params[:group_id]
-    @contacts = current_user.contacts.by_group(params[:group_id])
-                            .search(params[:term])
-                            .order(created_at: :desc)
-                            .page(params[:page])
+    @contacts = all_contacts(params)
   end
 
   def autocomplete
-    @contacts = current_user.contacts.search(params[:term]).order(created_at: :desc).page(params[:page])
+    @contacts = current_user.contacts
+                            .search(params[:term])
+                            .order(created_at: :desc)
+                            .page(params[:page])
   end
 
   def new
@@ -85,6 +85,13 @@ class ContactsController < ApplicationController
   #                           content_type: 'image/png')
   #   end
   # end
+
+  def all_contacts(params)
+    current_user.contacts.by_group(params[:group_id])
+                            .search(params[:term])
+                            .order(created_at: :desc)
+                            .page(params[:page])
+  end
 
   def previous_query_string
     session[:selected_group_id] ? { group_id: session[:selected_group_id] } : {}

@@ -11,13 +11,13 @@
 // about supported directives.
 //
 //= require jquery
+//= require rails-ujs
 //= require jquery-ui/core
 //= require jquery-ui/widget
 //= require jquery-ui/position
 //= require jquery-ui/widgets/autocomplete
 //= require jquery-ui/widgets/menu
 //= require twitter/bootstrap/dropdown
-//= require rails-ujs
 //= require turbolinks
 //= require jasny-bootstrap.min
 //= require activestorage
