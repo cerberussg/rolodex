@@ -1,5 +1,5 @@
-<%= form_tag(contacts_path, class: "navbar-form navbar-right", format: :js, role: 'search', method: :get, remote: true) do %>
-<%= hidden_field_tag :group_id, params[:group_id] %>
+<%= form_with url: contacts_path, class: "navbar-form navbar-right", method: :get do %>
+  <%= hidden_field_tag :group_id, params[:group_id] %>
   <div class="input-group">
     <%= text_field_tag :term, params[:term], class: "form-control",
       placeholder: "Search...", autocomplete: "off" %>

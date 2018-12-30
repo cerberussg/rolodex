@@ -10,17 +10,17 @@
 // Read Sprockets README (https://github.com/rails/sprockets#sprockets-directives) for details
 // about supported directives.
 //
-//= require jquery
 //= require rails-ujs
+//= require jquery
 //= require jquery-ui/core
 //= require jquery-ui/widget
 //= require jquery-ui/position
 //= require jquery-ui/widgets/autocomplete
 //= require jquery-ui/widgets/menu
 //= require twitter/bootstrap/dropdown
-//= require turbolinks
 //= require jasny-bootstrap.min
 //= require activestorage
+//= require turbolinks
 //= require toastr
 //= require_tree .
 
@@ -33,4 +33,12 @@ $( document ).on('turbolinks:load', function() {
       $(this).closest('form').submit();
     }
   })
+});
+
+$(document).on('click', '.pagination a[data-remote=true], a.list-group-item', function() {
+  history.pushState({}, '', $(this).attr('href'));
+});
+
+$(window).on('popstate', function() {
+  $.get(document.location.href);
 });
